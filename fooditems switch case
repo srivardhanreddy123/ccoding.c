@@ -1,0 +1,39 @@
+#include<stdio.h>
+main()
+{
+	int choice;
+	printf("enter your choice:\n 1.tea\n 2.egg puff\n 3.chicken burger\n 4.pineapple pastry\n 5.chocolate icecream\n");
+	scanf("%d",&choice);
+	switch(choice)
+	{
+		case 1:
+			{
+			printf("Food item - tea\n Price - Rs10/-");
+			break;
+			}
+			case 2:
+			{
+			printf("Food item - egg puff\n Price - Rs20/-");
+			break;
+			}
+			case 3:
+			{
+			printf("Food item - chicken burger\n Price - Rs50/-");
+			break;
+			}
+			case 4:
+			{
+			printf("Food item - pineapple pastry\n Price - Rs60/-");
+			break;
+			}
+			case 5:
+			{
+			printf("Food item - chocolate icecream\n Price - Rs80/-");
+			break;
+			}
+			default:
+			printf("enter correct choice");
+			
+	}
+	return 0;
+}

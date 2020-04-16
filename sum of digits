@@ -1,0 +1,21 @@
+#include<stdio.h>
+int p=0;
+int sum(int n)
+{
+	
+	int s;
+	s=n%10;
+	p=p+s;
+	n=n/10;
+	if(n==0)
+	return p;
+	else
+	return sum(n);
+}
+main()
+{
+	int d;
+printf("enter the number:");
+scanf("%d",&d);
+printf("%d",sum(d));	
+}

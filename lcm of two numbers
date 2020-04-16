@@ -1,0 +1,27 @@
+#include<stdio.h>
+int max;
+int lcm(int n1, int n2)
+{
+if(max%n1==0&&max%n2==0)
+return max;
+else
+{
+	max++;
+return	lcm(n1,n2);
+	}	
+}
+
+	
+
+main()
+{
+int n1,n2;
+printf("enter first number:");
+scanf("%d",&n1)	;
+printf("enter second number:");
+scanf("%d",&n2)	;
+
+max=n1>n2?n1:n2;
+printf("lcm of two numbers is %d",lcm(n1,n2));
+
+}

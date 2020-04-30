@@ -1,0 +1,42 @@
+#include<stdio.h>
+main()
+{
+	char ch;
+	FILE *fp,*fq,*fr;
+	fp=fopen("ab.txt","r");
+	fq=fopen("p.txt","w");
+	
+	if(fp==NULL||fq==NULL)
+	printf("file does not exist");
+	else
+	{	while((ch=fgetc(fp))!=EOF)
+		{
+			fputc(ch,fq);
+		}
+	}
+	
+	printf("file copied\n");
+
+FILE *fm;
+
+char c;
+	int i,pos;
+	fm=fopen("input.txt","r");
+	if(fm==NULL)
+	{
+		printf("file does not exist..");
+	}
+	fseek(fm,0,SEEK_END);
+	pos=ftell(fm);
+	i=0;
+	while(i<pos)
+	{
+		i++;
+		fseek(fm,-i,SEEK_END);
+		c=fgetc(fm);
+		printf("%c",c);
+	}
+	
+	return 0;
+	
+}
